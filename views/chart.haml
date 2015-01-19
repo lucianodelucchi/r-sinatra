@@ -1,0 +1,26 @@
+- content_for :javascripts do
+  %script{'src' => "//d3js.org/d3.v3.min.js", "charset" => "utf-8"}
+  %script{'src' => "/js/nv.d3.min.js"}
+
+- content_for :css do
+  %link{'rel' => 'stylesheet', 'href' => "/css/nv.d3.min.css", "type" => "text/css"}
+  :css
+    text {
+        font: 12px sans-serif;
+    }
+    svg {
+        display: block;
+    }
+    html, body, #chart1, svg {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+- content_for :javascripts_footer do
+  %script{'src' => "/js/app.js"}
+
+%div#chart{:style => "height: 600px;"}
+:javascript
+  var data = #{@data};
