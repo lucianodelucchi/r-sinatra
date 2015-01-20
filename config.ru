@@ -3,7 +3,8 @@ require 'bundler/setup'
 
 Bundler.require
 
-Dir.glob("./{config,helpers,controllers,models}/*.rb").each { |file| require file }
+Dir.glob("./{config,helpers,models}/*.rb").each { |file| require file }
 
-map("/chart") { run ChartController }
-map("/") { run ApplicationController }
+require './app'
+
+run ApplicationController
