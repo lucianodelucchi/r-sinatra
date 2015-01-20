@@ -1,7 +1,0 @@
-development:
-  adapter: sqlite3
-  database: db/dev.sqlite3
-
-production:
-  adapter: sqlite3
-  database: <%=ENV['OPENSHIFT_DATA_DIR']%>/prod.sqlite3
