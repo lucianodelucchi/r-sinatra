@@ -7,6 +7,7 @@ gem "sqlite3"
 gem "rake"
 gem "rest-client"
 gem "haml"
+gem "rack", "1.5.2"
 
 group :development do
   gem "better_errors"
