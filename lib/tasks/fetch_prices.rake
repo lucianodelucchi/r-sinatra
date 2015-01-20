@@ -13,6 +13,6 @@ namespace :klm do
 
     objects_to_persist = prices.map(&to_price_info)
     persisted_objects = PriceInfo.create(objects_to_persist)
-    p "#{persisted_objects.count} new prices saved"
+    p "#{DateTime.now} - #{persisted_objects.count} new prices saved"
   end
 end
