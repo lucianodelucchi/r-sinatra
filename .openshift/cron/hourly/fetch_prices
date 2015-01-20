@@ -1,0 +1,3 @@
+#!/bin/bash
+cd $OPENSHIFT_REPO_DIR
+RACK_ENV=production bundle exec rake klm:fetch_prices >> ${OPENSHIFT_RUBY_LOG_DIR}fetch_prices.log
